@@ -10,7 +10,7 @@ class AccountController {
   async show(request, response) {
     const { id } = request.params;
 
-    const account = await AccountRepository.GetById(id);
+    const account = await AccountRepository.getById(id);
 
     if (!account) {
       return response.status(400).json({ error: 'Not found' });

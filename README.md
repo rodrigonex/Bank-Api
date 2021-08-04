@@ -1,4 +1,4 @@
-### Bank Api
+# Bank Api
 
 Para iniciar o projeto e necessário baixar a dependencias do projeto, no terminal utilize o **yarn** ou **npm**.
 

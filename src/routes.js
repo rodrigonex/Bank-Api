@@ -2,6 +2,7 @@ const { Router } = require('express');
 
 const AgencyController = require('./app/controllers/AgencyController');
 const AccountController = require('./app/controllers/AccountController');
+const TransactionsController = require('./app/controllers/TransactionsController');
 
 const router = Router();
 
@@ -20,5 +21,8 @@ router.put('/accounts/:id', AccountController.update);
 router.delete('/accounts/:id', AccountController.delete);
 
 // Transactions
+router.post('/transactions/:id', TransactionsController.deposit);
+router.put('/transactions/:id', TransactionsController.transfer);
+router.patch('/transactions/:id', TransactionsController.withdraw);
 
 module.exports = router;
